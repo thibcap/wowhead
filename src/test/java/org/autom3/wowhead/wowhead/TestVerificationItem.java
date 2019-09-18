@@ -18,7 +18,8 @@ import org.openqa.selenium.support.PageFactory;
 public class TestVerificationItem {
 	
 	WebDriver driver;
-	String b = "firefox";
+//	String b = "firefox";
+	private String BROWSER=System.getProperty("browser");
 	
 
 	
@@ -32,7 +33,7 @@ public class TestVerificationItem {
 	
 	public void test() throws InterruptedException, FileNotFoundException{
 		
-		driver= Outils.choisirNavigateur(b);
+		driver= Outils.choisirNavigateur(BROWSER);
 		driver.manage().window().maximize();
 		driver.get("https://fr.wowhead.com/");
 
